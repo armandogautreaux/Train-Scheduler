@@ -1,0 +1,61 @@
+/*
+	Author: Armando Gautreaux
+	Template: Train Scheduler
+	Version: 0.1
+	GITHUB: https://github.com/armandogautreaux
+*/
+
+/* TABLE OF CONTENTS
+  1.  General Styles
+  2.  Header Content
+*/
+
+/*
+========================================
+1. General Styles
+========================================
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: darkgray;
+  background: #f2f6f7;
+}
+
+/*
+========================================
+2. Header Content
+========================================
+*/
+
+.bg1 {
+  background: url(../images/bg1.jpg);
+  height: 600px;
+  margin-top: -300px;
+  position: relative;
+}
+
+.bg2 {
+  background: #00344b;
+  border: 2px solid #00344b;
+}
+.primary-overlay {
+  background: rgba(0, 55, 91, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 6.6px;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 350px;
+}
