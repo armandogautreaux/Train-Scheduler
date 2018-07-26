@@ -56,22 +56,30 @@ $('#submit').on('click', function(event) {
     .val()
     .trim();
 
-  // 4.2 Then, we create an object with the refered variables
-  newTrain = {
-    trainName: trainName,
-    destination: destination,
-    firstTrain: firstTrain,
-    frequency: frequency
-  };
+  // 4.2 The next if statement will prevent populate empty values to our database
+  if (
+    $('#train-name-input').val().length > 0 &&
+    $('#destination-input').val().length > 0 &&
+    $('#first-train-time-input').val().length > 0 &&
+    $('#frequency-input').val().length
+  ) {
+    // 4.3 Then, we create an object with the refered variables
+    newTrain = {
+      trainName: trainName,
+      destination: destination,
+      firstTrain: firstTrain,
+      frequency: frequency
+    };
 
-  // 4.3 Next, we push the last object created to our database.
-  database.ref().push(newTrain);
+    // 4.4 Next, we push the last object created to our database.
+    database.ref().push(newTrain);
 
-  // 4.4 We finish by clearing the value of our inputs
-  $('#train-name-input').val('');
-  $('#destination-input').val('');
-  $('#first-train-time-input').val('');
-  $('#frequency-input').val('');
+    // 4.5 We finish by clearing the value of our inputs
+    $('#train-name-input').val('');
+    $('#destination-input').val('');
+    $('#first-train-time-input').val('');
+    $('#frequency-input').val('');
+  }
 });
 
 //------------------------------------------------------------------------------------------------
