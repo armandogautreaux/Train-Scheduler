@@ -58,9 +58,9 @@ $('#submit').on('click', function(event) {
 
   // 4.2 The next if statement will prevent populate empty values to our database
   if (
-    $('#train-name-input').val().length > 0 &&
-    $('#destination-input').val().length > 0 &&
-    $('#first-train-time-input').val().length > 0 &&
+    $('#train-name-input').val().length &&
+    $('#destination-input').val().length &&
+    $('#first-train-time-input').val().length &&
     $('#frequency-input').val().length
   ) {
     // 4.3 Then, we create an object with the refered variables
